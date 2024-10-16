@@ -73,6 +73,17 @@
             color: #555;
         }
 
+        #change-color-btn {
+            display: block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
         footer {
             background-color: #333;
             color: #fff;
@@ -88,10 +99,10 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My anusha Page</h1>
+        <h1>Welcome to My Anusha Page</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home Page</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -116,10 +127,32 @@
             <h2>Contact Section</h2>
             <p>Contact information will be provided here.</p>
         </section>
+
+        <!-- Add a button to change background color -->
+        <button id="change-color-btn">Change Background Color</button>
     </main>
 
     <footer>
         <p>&copy; 2024 My Sample Page. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript to add interactivity -->
+    <script>
+        // Function to generate a random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Get the button and add an event listener to change the background color
+        const changeColorBtn = document.getElementById('change-color-btn');
+        changeColorBtn.addEventListener('click', function() {
+            document.body.style.backgroundColor = getRandomColor();
+        });
+    </script>
 </body>
 </html>

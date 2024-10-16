@@ -1,12 +1,11 @@
 import java.util.Scanner;
 
-public class Main{
+public class hello {
 
     // Method to add two numbers
     public static double add(double a, double b) {
         return a + b;
     }
-    
 
     // Method to subtract two numbers
     public static double subtract(double a, double b) {
@@ -33,7 +32,7 @@ public class Main{
         System.out.println("Welcome to the Basic Calculator!");
 
         // Input two numbers
-        System.out.print("Enter first number: ");
+        System.out.print("Enter the first number: ");
         double num1 = scanner.nextDouble();
 
         System.out.print("Enter the second number: ");
