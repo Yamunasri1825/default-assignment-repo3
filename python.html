@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sample Page with Internal CSS</title>
+  <title>Sample Page with Internal CSS and JavaScript</title>
   <style>
     /* Internal CSS */
     body {
@@ -59,6 +59,17 @@
       text-align: center;
     }
   </style>
+  <script>
+    // JavaScript to display an alert when the page loads
+    window.onload = function() {
+      alert('Welcome to the Sample Page!');
+    };
+
+    // JavaScript function to change the color of the paragraph text
+    function changeTextColor() {
+      document.getElementById('main-text').style.color = '#FF5733';
+    }
+  </script>
 </head>
 <body>
 
@@ -74,7 +85,8 @@
 
   <main>
     <h2>About This Page</h2>
-    <p>This is a simple HTML page with internal CSS styling. Internal CSS is applied within the &lt;style&gt; tags inside the &lt;head&gt; section of the document.</p>
+    <p id="main-text">This is a simple HTML page with internal CSS and JavaScript. Click the button below to change the color of this text.</p>
+    <button onclick="changeTextColor()">Change Text Color</button>
   </main>
 
   <footer>
